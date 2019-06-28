@@ -37,9 +37,9 @@ try
  ticon := TTrayIcon.Create(form1);
  ticon.Visible:=true;
  com.port := ParamStr(1);
- com.BaudRate := StrToBaudRate(ParamStr(1));
+ com.BaudRate := StrToBaudRate(ParamStr(2));
  udps.DefaultPort := ParamStr(3).ToInteger();
- udps.Active;
+ udps.Active:=true;
  com.Connected:= true;
  if ParamStr(4)='1' then sss:=#13#10 else sss:='';
 
